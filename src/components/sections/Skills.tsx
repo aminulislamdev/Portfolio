@@ -1,5 +1,6 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import { skillsData, techStack } from "@/data/skills";
+import { Star } from "lucide-react"; // আইকন
 
 export default function Skills() {
   const categories = [
@@ -17,7 +18,6 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-        {/* বাম দিক: প্রোগ্রেস বার */}
         <div className="space-y-6 bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-700">
           <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-6">
             Core Technologies
@@ -39,9 +39,7 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* ডান দিক: ক্যাটাগরি ও টেক স্ট্যাক */}
         <div className="space-y-8">
-          {/* ক্যাটাগরি */}
           <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-700">
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-6">
               Core Expertise
@@ -55,7 +53,6 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* টেক স্ট্যাক */}
           <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-700">
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-6">
               Technologies I Use
@@ -66,6 +63,21 @@ export default function Skills() {
                   {tech}
                 </span>
               ))}
+            </div>
+          </div>
+
+          {/* নতুন: Why Hire Me কার্ড */}
+          <div className="bg-linear-to-br from-blue-600 to-blue-800 p-8 rounded-3xl shadow-lg text-white">
+            <div className="flex items-start gap-4">
+              <div className="bg-white/20 p-3 rounded-xl shrink-0">
+                <Star size={24} className="text-white fill-white/50" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold mb-2">Why Hire Me as a Full-Stack Developer?</h4>
+                <p className="text-blue-100 text-sm leading-relaxed">
+                  Unlike traditional developers, my background in data architecture allows me to build backends that are inherently optimized for complex data operations. I deliver complete solutions—from setting up secure Node.js servers to designing dynamic React frontends.
+                </p>
+              </div>
             </div>
           </div>
         </div>
