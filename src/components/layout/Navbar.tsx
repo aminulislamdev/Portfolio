@@ -6,18 +6,23 @@ import { Moon, Sun, Menu, X, Download } from "lucide-react";
 import { navLinks } from "@/data/navLinks";
 import Button from "@/components/ui/Button";
 
+const subscribeToTheme = (onChange: () => void) => {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+  return () => observer.disconnect();
+};
+
+const getThemeSnapshot = () => document.documentElement.classList.contains("dark");
+const getServerThemeSnapshot = () => false;
+
 export default function Navbar() {
   const isDark = useSyncExternalStore(
-    (onStoreChange) => {
-      const observer = new MutationObserver(onStoreChange);
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ["class"],
-      });
-      return () => observer.disconnect();
-    },
-    () => document.documentElement.classList.contains("dark"),
-    () => false,
+    subscribeToTheme,
+    getThemeSnapshot,
+    getServerThemeSnapshot
   );
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
