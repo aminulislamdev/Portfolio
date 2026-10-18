@@ -1,7 +1,12 @@
 import SectionTitle from "@/components/ui/SectionTitle";
-import { skillsData } from "@/data/skills";
+import { skillsData, techStack } from "@/data/skills";
 
 export default function Skills() {
+  const categories = [
+    "Frontend Dev", "Backend Dev", "Database", "DevOps",
+    "Cloud", "AI & Automation", "UI/UX", "Testing"
+  ];
+
   return (
     <section id="skills" className="py-20 px-6 max-w-6xl mx-auto">
       <SectionTitle
@@ -34,9 +39,35 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* ডান দিক: (পরবর্তী কমিটে যোগ হবে) */}
-        <div className="bg-slate-50 dark:bg-slate-900/50 p-8 rounded-3xl border border-slate-200 dark:border-slate-800">
-          <p className="text-slate-500 text-sm italic">Technologies will appear here...</p>
+        {/* ডান দিক: ক্যাটাগরি ও টেক স্ট্যাক */}
+        <div className="space-y-8">
+          {/* ক্যাটাগরি */}
+          <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-700">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-6">
+              Core Expertise
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {categories.map((cat, i) => (
+                <span key={i} className="px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-medium border border-blue-100 dark:border-blue-800">
+                  {cat}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* টেক স্ট্যাক */}
+          <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-700">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-6">
+              Technologies I Use
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {techStack.map((tech, i) => (
+                <span key={i} className="px-3 py-1.5 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-md text-xs font-semibold">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
       </div>
