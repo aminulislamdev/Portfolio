@@ -17,7 +17,7 @@ export default function Hero() {
 
         <h1 className="text-4xl md:text-6xl font-bold leading-tight font-playfair tracking-tight">
           Transforming Ideas<br />
-          into <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">SaaS Products</span>
+          into <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-400">SaaS Products</span>
         </h1>
 
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
