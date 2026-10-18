@@ -64,7 +64,7 @@ export default function Footer() {
             <a href="https://wa.me/8801709150885" target="_blank" rel="noreferrer" className="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-green-600 transition-colors">
               <Phone size={18} />
             </a>
-            <a href="https://github.com/aminulislam424842" target="_blank" rel="noreferrer" className="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors">
+            <a href="https://github.com/aminulislamdev" target="_blank" rel="noreferrer" className="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors">
               <GithubIcon size={18} />
             </a>
             <a href="https://linkedin.com/in/aminulislamjs/" target="_blank" rel="noreferrer" className="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-colors">
@@ -75,7 +75,7 @@ export default function Footer() {
 
       </div>
 
-      {/* কপিরাইট */}
+    
       <div className="max-w-6xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
         <p>&copy; 2026 Aminul Islam. All rights reserved.</p>
         <p>Designed & Built with <span className="text-red-500">♥</span> in Bangladesh</p>

@@ -29,7 +29,7 @@ export default function Projects() {
               Clean, structured, and production-ready code.
             </p>
           </div>
-          <Button href="https://github.com/aminulislam424842" variant="dark" size="md">
+          <Button href="https://github.com/aminulislamdev" variant="dark" size="md">
             Visit GitHub
           </Button>
         </div>

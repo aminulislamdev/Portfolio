@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, Printer, Mail, Phone, MapPin } from "lucide-react";
 
-// ✅ কাস্টম SVG আইকন
+
 const GithubIcon = ({ size = 14 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
@@ -27,7 +27,6 @@ export default function CVPage() {
   return (
     <div className="min-h-screen bg-slate-100 dark:bg-slate-900 py-10 px-4 md:px-0 print:bg-white print:py-0">
 
-      {/* টপ অ্যাকশন বার (প্রিন্টে দেখা যাবে না) */}
       <div className="max-w-4xl mx-auto mb-6 flex justify-between items-center print:hidden">
         <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 transition-colors">
           <ArrowLeft size={16} /> Back to Portfolio
@@ -40,10 +39,10 @@ export default function CVPage() {
         </button>
       </div>
 
-      {/* মূল CV কন্টেইনার */}
+    
       <div className="max-w-4xl mx-auto bg-white dark:bg-slate-950 print:bg-white shadow-2xl rounded-2xl overflow-hidden print:shadow-none print:rounded-none">
 
-        {/* হেডার সেকশন */}
+ 
         <div className="bg-slate-900 text-white p-8 md:p-12 print:text-black print:bg-white print:border-b">
           <h1 className="text-4xl md:text-5xl font-bold font-playfair tracking-tight mb-2">Md. Aminul Islam Mahi</h1>
           <p className="text-blue-400 print:text-blue-600 font-semibold tracking-widest uppercase text-sm mb-6">
@@ -54,14 +53,13 @@ export default function CVPage() {
             <span className="flex items-center gap-2"><MapPin size={14} /> Rajshahi, Bangladesh</span>
             <span className="flex items-center gap-2"><Phone size={14} /> +880 1709150885</span>
             <span className="flex items-center gap-2"><Mail size={14} /> aminulislam424842@gmail.com</span>
-            <span className="flex items-center gap-2"><GithubIcon size={14} /> github.com/aminulislam424842</span>
+            <span className="flex items-center gap-2"><GithubIcon size={14} /> github.com/aminulislamdev</span>
             <span className="flex items-center gap-2"><LinkedinIcon size={14} /> linkedin.com/in/aminulislamjs/</span>
           </div>
         </div>
 
         <div className="p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-10 print:grid-cols-3 print:gap-6">
 
-          {/* বাম কলাম (প্রোফাইল, স্কিলস, এডুকেশন, অ্যাচিভমেন্ট) */}
           <div className="space-y-8 md:col-span-1">
 
             {/* About */}
@@ -95,7 +93,6 @@ export default function CVPage() {
               </div>
             </div>
 
-            {/* Education */}
             <div>
               <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Education & Training</h3>
               <div className="space-y-4">
@@ -112,7 +109,7 @@ export default function CVPage() {
               </div>
             </div>
 
-            {/* Languages */}
+  
             <div>
               <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Languages</h3>
               <ul className="text-sm text-slate-600 dark:text-slate-400 space-y-2">
@@ -123,10 +120,10 @@ export default function CVPage() {
 
           </div>
 
-          {/* ডান কলাম (প্রজেক্ট এবং সার্টিফিকেশন) */}
+  
           <div className="space-y-8 md:col-span-2">
 
-            {/* Projects - ✅ হোম পেজের প্রজেক্টগুলো এখানে বসানো হলো */}
+
             <div>
               <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Selected Projects</h3>
 
