@@ -24,7 +24,6 @@ export default function Hero() {
           CST Student | Full Stack Developer specializing in React, Next.js, TypeScript, Node.js, MongoDB, AI Integration, and scalable SaaS applications.
         </p>
 
-        {/* ট্যাগসমূহ */}
         <div className="flex flex-wrap gap-3">
           {["Full Stack Dev", "Next.js", "TypeScript", "Node.js", "MongoDB"].map((tag) => (
             <span key={tag} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-semibold">
@@ -33,7 +32,6 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* বাটনসমূহ */}
         <div className="flex flex-wrap gap-4 pt-4">
           <Button href="#contact" variant="primary" size="lg">
             Hire Me
@@ -47,10 +45,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ডান দিকের ছবি */}
-      <div className="flex-1 relative">
+      {/* ডান দিকের ছবি ও ফ্লোটিং কার্ড */}
+      <div className="flex-1 relative animate-float">
         <div className="w-64 h-80 md:w-80 md:h-96 rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl relative mx-auto">
-          {/* এখানে আপনার ছবির নাম দিতে হবে, যেমন: /profile.jpg */}
           <Image
             src="/profile.jpg"
             alt="Aminul Islam"
@@ -58,6 +55,28 @@ export default function Hero() {
             className="object-cover"
             priority
           />
+        </div>
+
+        {/* ফ্লোটিং কার্ড ১ */}
+        <div className="absolute -left-4 md:-left-10 top-10 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3">
+          <div className="bg-green-100 dark:bg-green-900/50 p-2 rounded-lg text-green-600 dark:text-green-400">
+            <Code2 size={20} />
+          </div>
+          <div>
+            <p className="text-xs font-bold text-slate-800 dark:text-white">Features Shipped</p>
+            <p className="text-[10px] text-slate-500">50+ production features</p>
+          </div>
+        </div>
+
+        {/* ফ্লোটিং কার্ড ২ */}
+        <div className="absolute -right-4 md:-right-8 bottom-20 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3">
+          <div className="bg-blue-100 dark:bg-blue-900/50 p-2 rounded-lg text-blue-600 dark:text-blue-400">
+            <ExternalLink size={20} />
+          </div>
+          <div>
+            <p className="text-xs font-bold text-slate-800 dark:text-white">API Integration</p>
+            <p className="text-[10px] text-slate-500">REST API & AI Services</p>
+          </div>
         </div>
       </div>
 
