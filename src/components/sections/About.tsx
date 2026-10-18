@@ -4,20 +4,25 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import Button from "@/components/ui/Button";
 
 export default function About() {
+  const infoItems = [
+    { icon: <MapPin size={18} />, text: "Rajshahi, Bangladesh" },
+    { icon: <Code size={18} />, text: "Full Stack Developer" },
+    { icon: <Clock size={18} />, text: "Remote Available" },
+    { icon: <Zap size={18} />, text: "SaaS • APIs • Dashboards" },
+  ];
+
   return (
     <section id="about" className="py-20 px-6 bg-slate-100 dark:bg-slate-900/50">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-        {/* বাম দিকের ছবি */}
         <div className="relative">
-          <div className="w-full aspect-4/5 max-w-md mx-auto rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl relative">
+          <div className="w-full aspect-[4/5] max-w-md mx-auto rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl relative">
             <Image
               src="/about.jpg"
               alt="Aminul Islam"
               fill
               className="object-cover"
             />
-            {/* ওভারলে কার্ড */}
             <div className="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm p-4 rounded-xl flex items-center gap-4">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white shrink-0">
                 <Code size={24} />
@@ -30,7 +35,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* ডান দিকের কন্টেন্ট */}
         <div>
           <SectionTitle
             label="About Me"
@@ -43,11 +47,18 @@ export default function About() {
               I&apos;m <strong className="text-slate-900 dark:text-white">Aminul Islam</strong>, a passionate Full Stack Developer specializing in building modern, responsive, and scalable web applications.
             </p>
             <p>
-              My skill set includes designing clean UI/UX, developing REST APIs, handling databases, and automating workflows. I focus on writing efficient, maintainable code and building systems that solve real-world problems.
+              My skill set includes designing clean UI/UX, developing REST APIs, handling databases, and automating workflows. I focus on writing efficient, maintainable code.
             </p>
-            <p>
-              My goal is to grow as a <strong className="text-slate-900 dark:text-white">professional full stack developer</strong> and work remotely with global clients.
-            </p>
+          </div>
+
+          {/* নতুন: ইনফো গ্রিড */}
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            {infoItems.map((item, index) => (
+              <div key={index} className="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+                <span className="text-blue-600 dark:text-blue-400">{item.icon}</span>
+                {item.text}
+              </div>
+            ))}
           </div>
 
           <Button href="/cv.html" variant="primary" size="md">
