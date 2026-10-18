@@ -1,28 +1,36 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Moon, Sun, Menu, X, Download } from "lucide-react";
 import { useTheme } from "next-themes";
 import { navLinks } from "@/data/navLinks";
 import Button from "@/components/ui/Button";
 
+// ✅ ক্লায়েন্ট সাইডে মাউন্ট হয়েছে কিনা চেক করার জন্য হেল্পার
+const emptySubscribe = () => () => { };
+const useMounted = () => {
+  return useSyncExternalStore(
+    emptySubscribe,
+    () => true, // ক্লায়েন্ট সাইডে true
+    () => false // সার্ভার সাইডে false
+  );
+};
+
 export default function Navbar() {
   const { resolvedTheme, setTheme } = useTheme();
+  const mounted = useMounted(); // ✅ useSyncExternalStore ব্যবহার
 
-  const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-
+    // mounted চেক এখানে নেই, শুধু স্ক্রল লিসেনার
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -53,6 +61,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
+          {/* ✅ mounted চেক এখন useSyncExternalStore থেকে আসছে */}
           {mounted && (
             <button
               type="button"
