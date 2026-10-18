@@ -16,7 +16,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         <div className="relative">
-          <div className="w-full aspect-[4/5] max-w-md mx-auto rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl relative">
+          <div className="w-full aspect-4/5 max-w-md mx-auto rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl relative">
             <Image
               src="/about.jpg"
               alt="Aminul Islam"
