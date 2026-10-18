@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider"; // ✅ নতুন ইমপোর্ট
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -17,14 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning> {/* ✅ suppressHydrationWarning জরুরি */}
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300`}>
-
-        {/* ✅ ThemeProvider যুক্ত করা হলো */}
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <html lang="en" suppressHydrationWarning>
+      {/* ✅ এখানে bg-white এবং dark:bg-slate-950 সরাসরি ক্লাসে দেওয়া হলো */}
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           {children}
         </ThemeProvider>
-
       </body>
     </html>
   );
