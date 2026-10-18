@@ -51,7 +51,7 @@ export default function About() {
             </p>
           </div>
 
-          {/* নতুন: ইনফো গ্রিড */}
+         
           <div className="grid grid-cols-2 gap-4 mb-8">
             {infoItems.map((item, index) => (
               <div key={index} className="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
@@ -61,7 +61,7 @@ export default function About() {
             ))}
           </div>
 
-          <Button href="/cv.html" variant="primary" size="md">
+          <Button href="/cv" variant="primary" size="md">
             View My CV
           </Button>
         </div>

@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import { navLinks } from "@/data/navLinks";
 import Button from "@/components/ui/Button";
 
-// ক্লায়েন্ট সাইডে মাউন্ট হয়েছে কিনা চেক করার জন্য (লিন্ট এরর ফিক্স)
+
 const emptySubscribe = () => () => { };
 const useMounted = () => {
   return useSyncExternalStore(
@@ -47,7 +47,7 @@ export default function Navbar() {
       }`}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
-        {/* লোগো এবং নাম */}
+      
         <Link href="/" className="flex items-center gap-3 font-bold text-xl tracking-tighter">
           <div className="relative w-10 h-10 overflow-hidden">
             <Image
@@ -64,7 +64,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* ডেস্কটপ মেনু */}
+  
         <div className="hidden md:flex gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
           {navLinks.map((link) => (
             <a key={link.name} href={link.href} className="hover:text-blue-600 transition-colors">
@@ -74,7 +74,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* ডার্ক মোড বাটন */}
+      
           {mounted && (
             <button
               type="button"
@@ -90,21 +90,21 @@ export default function Navbar() {
             </button>
           )}
 
-          {/* রেজুমে বাটন */}
+         
           <div className="hidden sm:block">
-            <Button href="/cv.html" variant="primary" size="sm">
+            <Button href="/cv" variant="primary" size="sm">
               <Download size={16} /> Resume
             </Button>
           </div>
 
-          {/* মোবাইল মেনু টগল */}
+         
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2">
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
 
-      {/* মোবাইল মেনু */}
+   
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 p-4 space-y-4 shadow-lg">
           {navLinks.map((link) => (
@@ -118,7 +118,7 @@ export default function Navbar() {
             </a>
           ))}
           <div className="pt-2">
-            <Button href="/cv.html" variant="primary" className="w-full">
+            <Button href="/cv" variant="primary" className="w-full">
               <Download size={16} /> Resume
             </Button>
           </div>
