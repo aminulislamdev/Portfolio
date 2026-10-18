@@ -3,57 +3,29 @@
 import { useState, useEffect, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Moon, Sun, Menu, X, Download } from "lucide-react";
+import { useTheme } from "next-themes"; // ✅ নতুন হুক
 import { navLinks } from "@/data/navLinks";
 import Button from "@/components/ui/Button";
 
-const getThemeSnapshot = () => {
-  const savedTheme = localStorage.getItem("theme");
-  return savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
-};
-
-const getServerThemeSnapshot = () => false;
-
-const subscribeToTheme = (callback: () => void) => {
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  window.addEventListener("storage", callback);
-  window.addEventListener("theme-change", callback);
-  mediaQuery.addEventListener("change", callback);
-
-  return () => {
-    window.removeEventListener("storage", callback);
-    window.removeEventListener("theme-change", callback);
-    mediaQuery.removeEventListener("change", callback);
-  };
-};
+const subscribe = () => () => { };
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
 
 export default function Navbar() {
-  const isDark = useSyncExternalStore(subscribeToTheme, getThemeSnapshot, getServerThemeSnapshot);
+  const { theme, setTheme } = useTheme();
+  const mounted = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // পেজ লোড হওয়ার সময় localStorage থেকে থিম চেক করা
+  // মাউন্ট হওয়ার পর থিম ডিটেক্ট করা (SSR ইস্যু এড়াতে)
   useEffect(() => {
-    if (getThemeSnapshot()) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = !isDark ? "dark" : "light";
-    localStorage.setItem("theme", newTheme); // ✅ localStorage এ সেভ
-
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    window.dispatchEvent(new Event("theme-change"));
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -76,9 +48,16 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+          {/* ✅ মাউন্টেড না হলে বাটন দেখাবে না (ফ্ল্যাশ এড়াতে) */}
+          {mounted && (
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              aria-label="Toggle Dark Mode"
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          )}
 
           <div className="hidden sm:block">
             <Button href="/cv.html" variant="primary" size="sm">
