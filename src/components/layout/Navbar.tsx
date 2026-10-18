@@ -6,35 +6,54 @@ import { Moon, Sun, Menu, X, Download } from "lucide-react";
 import { navLinks } from "@/data/navLinks";
 import Button from "@/components/ui/Button";
 
-const subscribeToTheme = (onChange: () => void) => {
-  const observer = new MutationObserver(onChange);
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["class"],
-  });
-  return () => observer.disconnect();
+const getThemeSnapshot = () => {
+  const savedTheme = localStorage.getItem("theme");
+  return savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
 };
 
-const getThemeSnapshot = () => document.documentElement.classList.contains("dark");
 const getServerThemeSnapshot = () => false;
 
+const subscribeToTheme = (callback: () => void) => {
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  window.addEventListener("storage", callback);
+  window.addEventListener("theme-change", callback);
+  mediaQuery.addEventListener("change", callback);
+
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("theme-change", callback);
+    mediaQuery.removeEventListener("change", callback);
+  };
+};
+
 export default function Navbar() {
-  const isDark = useSyncExternalStore(
-    subscribeToTheme,
-    getThemeSnapshot,
-    getServerThemeSnapshot
-  );
+  const isDark = useSyncExternalStore(subscribeToTheme, getThemeSnapshot, getServerThemeSnapshot);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // পেজ লোড হওয়ার সময় localStorage থেকে থিম চেক করা
   useEffect(() => {
+    if (getThemeSnapshot()) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleTheme = () => {
-    document.documentElement.classList.toggle("dark");
+    const newTheme = !isDark ? "dark" : "light";
+    localStorage.setItem("theme", newTheme); // ✅ localStorage এ সেভ
+
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    window.dispatchEvent(new Event("theme-change"));
   };
 
   return (
@@ -48,7 +67,6 @@ export default function Navbar() {
           <span>Islam</span>
         </Link>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
           {navLinks.map((link) => (
             <a key={link.name} href={link.href} className="hover:text-blue-600 transition-colors">
@@ -74,7 +92,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 p-4 space-y-4 shadow-lg">
           {navLinks.map((link) => (
