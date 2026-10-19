@@ -1,6 +1,5 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import { skillsData, techStack, categories } from "@/data/skills";
-import { Star } from "lucide-react";
 
 export default function Skills() {
   return (
@@ -36,7 +35,7 @@ export default function Skills() {
         </div>
 
         <div className="space-y-8">
-          {/* Categories */}
+          
           <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-700">
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-6">
               Core Expertise
@@ -50,7 +49,7 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Tech stack */}
+          {/* টেক স্ট্যাক */}
           <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-700">
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-6">
               Technologies I Use
@@ -64,20 +63,6 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Engineering mindset card */}
-          <div className="bg-linear-to-br from-slate-900 to-slate-800 p-8 rounded-3xl shadow-lg text-white border border-slate-700">
-            <div className="flex items-start gap-4">
-              <div className="bg-blue-500/20 p-3 rounded-xl shrink-0">
-                <Star size={24} className="text-blue-400 fill-blue-400/20" />
-              </div>
-              <div>
-                <h4 className="text-lg font-bold mb-2">My Engineering Mindset</h4>
-                <p className="text-slate-300 text-sm leading-relaxed">
-                  I do not just write code; I build maintainable systems. I focus on writing clean, reusable components, following Git best practices, and constantly learning modern technologies to solve real-world problems in a collaborative team environment.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
