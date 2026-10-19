@@ -21,33 +21,34 @@ const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 min-h-screen">
+    <section id="hero" className="pt-20 pb-16 px-6 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-16 min-h-[90vh]">
 
+      {/* বাম দিকের টেক্সট */}
       <div className="flex-1 space-y-6">
-        <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-bold border border-blue-100 dark:border-blue-800">
+        <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1.5 rounded-full text-xs font-bold border border-blue-100 dark:border-blue-800">
           <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse-dot"></span>
           Open to Internships & Junior Roles
         </div>
 
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight font-playfair tracking-tight text-slate-900 dark:text-white">
+        <h1 className="text-4xl md:text-6xl font-bold leading-[1.15] font-playfair tracking-tight text-slate-900 dark:text-white">
           Aspiring Full Stack<br />
           <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-400">Developer</span>
         </h1>
 
-        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
+        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
           Diploma student in CST at Rajshahi Polytechnic Institute. I build modern, responsive web applications using React, Next.js, and TypeScript, and I am currently expanding my backend skills.
         </p>
 
         <div className="flex flex-wrap gap-3">
           {["React", "Next.js", "TypeScript", "Tailwind CSS", "Learning Node.js"].map((tag) => (
-            <span key={tag} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-semibold">
+            <span key={tag} className="px-3.5 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-semibold shadow-sm border border-slate-200 dark:border-slate-700">
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-4 pt-4 items-center">
-          <Button href="#projects" variant="primary" size="lg">
+        <div className="flex flex-wrap gap-4 pt-6 items-center">
+          <Button href="#projects" variant="primary" size="lg" className="shadow-lg shadow-blue-600/20">
             View Projects
           </Button>
           <Button href="#contact" variant="outline" size="lg">
@@ -55,52 +56,57 @@ export default function Hero() {
           </Button>
 
           <div className="flex gap-3 ml-2">
-            <a href="https://github.com/aminulislamdev" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300">
+            <a href="https://github.com/aminulislamdev" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-all hover:-translate-y-1 text-slate-700 dark:text-slate-300 shadow-sm border border-slate-200 dark:border-slate-700">
               <GithubIcon size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/aminulislamjs/" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+            <a href="https://www.linkedin.com/in/aminulislamjs/" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all hover:-translate-y-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 shadow-sm border border-slate-200 dark:border-slate-700">
               <LinkedinIcon size={20} />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="flex-1 relative animate-float">
-        <div className="w-64 h-80 md:w-80 md:h-96 rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl relative mx-auto bg-linear-to-br from-blue-100 to-blue-200 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center">
-          <Image
-            src="/profile.jpg"
-            alt="Aminul Islam"
-            fill
-            className="object-cover z-10"
-            priority
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-            }}
-          />
-          <span className="text-blue-500 dark:text-blue-400 font-bold text-2xl z-0 absolute">
-            AI
-          </span>
-        </div>
+      {/* ✅ ডান দিকের ছবি ও স্টাইল */}
+      <div className="flex-1 relative flex justify-center items-center">
 
-        <div className="absolute -left-4 md:-left-10 top-10 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3">
-          <div className="bg-green-100 dark:bg-green-900/50 p-2 rounded-lg text-green-600 dark:text-green-400">
-            <Code2 size={20} />
-          </div>
-          <div>
-            <p className="text-xs font-bold text-slate-800 dark:text-white">Frontend</p>
-            <p className="text-[10px] text-slate-500">Completed</p>
-          </div>
-        </div>
+        {/* পেছনের গ্লো/ব্লব ইফেক্ট */}
+        <div className="absolute inset-0 bg-linear-to-tr from-blue-100 to-blue-50 dark:from-blue-900/20 dark:to-slate-800/50 rounded-full blur-3xl opacity-60 scale-90"></div>
 
-        <div className="absolute -right-4 md:-right-8 bottom-20 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3">
-          <div className="bg-blue-100 dark:bg-blue-900/50 p-2 rounded-lg text-blue-600 dark:text-blue-400">
-            <ExternalLink size={20} />
+        <div className="relative w-80 h-105 md:w-100 md:h-130">
+
+          
+          <div className="w-full h-full rounded-4xl overflow-hidden border-[6px] border-white dark:border-slate-800 shadow-2xl relative z-10">
+            <Image
+              src="/profile.jpg"
+              alt="Aminul Islam"
+              fill
+              className="object-cover object-top"
+              priority
+            />
           </div>
-          <div>
-            <p className="text-xs font-bold text-slate-800 dark:text-white">Backend</p>
-            <p className="text-[10px] text-slate-500">In Progress</p>
+
+          {/* ✅ ফ্লোটিং কার্ড ১ (সুন্দরভাবে ছবির কর্নারে বসানো) */}
+          <div className="absolute -left-6 md:-left-10 top-16 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3 z-20 animate-float">
+            <div className="bg-green-100 dark:bg-green-900/50 p-2.5 rounded-xl text-green-600 dark:text-green-400">
+              <Code2 size={22} />
+            </div>
+            <div>
+              <p className="text-sm font-bold text-slate-800 dark:text-white">Frontend</p>
+              <p className="text-[11px] font-medium text-slate-500">Completed</p>
+            </div>
           </div>
+
+          {/* ✅ ফ্লোটিং কার্ড ২ (সুন্দরভাবে ছবির কর্নারে বসানো) */}
+          <div className="absolute -right-6 md:-right-10 bottom-24 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3 z-20 animate-float" style={{ animationDelay: '1.5s' }}>
+            <div className="bg-blue-100 dark:bg-blue-900/50 p-2.5 rounded-xl text-blue-600 dark:text-blue-400">
+              <ExternalLink size={22} />
+            </div>
+            <div>
+              <p className="text-sm font-bold text-slate-800 dark:text-white">Backend</p>
+              <p className="text-[11px] font-medium text-slate-500">In Progress</p>
+            </div>
+          </div>
+
         </div>
       </div>
 
