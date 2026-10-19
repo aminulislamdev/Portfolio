@@ -5,7 +5,8 @@ import Button from "@/components/ui/Button";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-6 bg-slate-950">
+    // ✅ bg-slate-50 (লাইট) এবং dark:bg-slate-950 (ডার্ক) দেওয়া হলো
+    <section id="projects" className="py-20 px-6 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
 
         {/* Featured Projects */}
@@ -21,13 +22,13 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* GitHub CTA */}
-        <div className="bg-slate-900 rounded-2xl border border-slate-800 p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left mb-24">
+       
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left mb-24 transition-colors duration-300">
           <div>
-            <h3 className="text-lg font-bold text-white mb-1">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">
               Explore my code repositories.
             </h3>
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-slate-600 dark:text-slate-400">
               Clean, structured, and version-controlled with Git.
             </p>
           </div>
@@ -37,7 +38,7 @@ export default function Projects() {
         </div>
 
         {/* Future Roadmap Section */}
-        <div className="border-t border-slate-800 pt-16">
+        <div className="border-t border-slate-200 dark:border-slate-800 pt-16 transition-colors duration-300">
           <SectionTitle
             label="Coming Soon"
             title="Project Roadmap"

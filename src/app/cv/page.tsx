@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Printer, Mail, Phone, MapPin } from "lucide-react";
-
+import Image from "next/image";
+import { ArrowLeft, Printer, Mail, Phone, MapPin, Globe } from "lucide-react";
 
 const GithubIcon = ({ size = 14 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -20,220 +20,215 @@ const LinkedinIcon = ({ size = 14 }: { size?: number }) => (
 );
 
 export default function CVPage() {
-  const handlePrint = () => {
-    window.print();
-  };
-
   return (
-    <div className="min-h-screen bg-slate-100 dark:bg-slate-900 py-10 px-4 md:px-0 print:bg-white print:py-0">
+    <div className="min-h-screen bg-slate-100 print:bg-white py-8 print:py-0 px-4 print:px-0">
 
-      <div className="max-w-4xl mx-auto mb-6 flex justify-between items-center print:hidden">
-        <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 transition-colors">
+      {/* টপ অ্যাকশন বার */}
+      <div className="max-w-[210mm] mx-auto mb-6 flex justify-between items-center print:hidden">
+        <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">
           <ArrowLeft size={16} /> Back to Portfolio
         </Link>
         <button
-          onClick={handlePrint}
+          onClick={() => window.print()}
           className="flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
         >
           <Printer size={16} /> Download PDF
         </button>
       </div>
 
-    
-      <div className="max-w-4xl mx-auto bg-white dark:bg-slate-950 print:bg-white shadow-2xl rounded-2xl overflow-hidden print:shadow-none print:rounded-none">
+      {/* মূল CV কন্টেইনার */}
+      <div className="w-[210mm] h-[297mm] mx-auto bg-white shadow-xl print:shadow-none p-10 print:p-[12mm] text-slate-800 box-border flex flex-col">
 
- 
-        <div className="bg-slate-900 text-white p-8 md:p-12 print:text-black print:bg-white print:border-b">
-          <h1 className="text-4xl md:text-5xl font-bold font-playfair tracking-tight mb-2">Md. Aminul Islam Mahi</h1>
-          <p className="text-blue-400 print:text-blue-600 font-semibold tracking-widest uppercase text-sm mb-6">
-            Aspiring Full Stack Developer | Frontend Completed, Backend in Progress
-          </p>
+        {/* ১. হেডার সেকশন */}
+        <div className="flex justify-between items-start border-b-2 border-slate-800 pb-4 mb-4 shrink-0">
+          <div className="flex-1">
+            {/* নাম ও টাইটেল ফন্ট বড় করা হলো */}
+            <h1 className="text-4xl font-bold text-slate-900 tracking-tight mb-1">Md. Aminul Islam Mahi</h1>
+            <h2 className="text-xl font-semibold text-blue-600 mb-3">Aspiring Full Stack Developer</h2>
 
-          <div className="flex flex-wrap gap-4 text-sm text-slate-300 print:text-slate-600">
-            <span className="flex items-center gap-2"><MapPin size={14} /> Rajshahi, Bangladesh</span>
-            <span className="flex items-center gap-2"><Phone size={14} /> +880 1709150885</span>
-            <span className="flex items-center gap-2"><Mail size={14} /> aminulislam424842@gmail.com</span>
-            <span className="flex items-center gap-2"><GithubIcon size={14} /> github.com/aminulislamdev</span>
-            <span className="flex items-center gap-2"><LinkedinIcon size={14} /> linkedin.com/in/aminulislamjs/</span>
+            {/* কন্টাক্ট ইনফো ফন্ট একটু বড় করা হলো */}
+            <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-[13px] text-slate-600">
+              <span className="flex items-center gap-2"><MapPin size={14} /> Rajshahi, Bangladesh</span>
+              <span className="flex items-center gap-2"><Phone size={14} /> +880 1709150885</span>
+              <span className="flex items-center gap-2"><Mail size={14} /> aminulislam424842@gmail.com</span>
+              <span className="flex items-center gap-2"><GithubIcon size={14} /> github.com/aminulislamdev</span>
+              <span className="flex items-center gap-2"><LinkedinIcon size={14} /> linkedin.com/in/aminulislamjs/</span>
+              <span className="flex items-center gap-2"><Globe size={14} /> aminul-portfolio.vercel.app</span>
+            </div>
+          </div>
+
+          <div className="w-28 h-28 ml-6 relative rounded-lg overflow-hidden border border-slate-200 shrink-0 shadow-sm">
+            <Image
+              src="/profile.jpg"
+              alt="Aminul Islam"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
 
-        <div className="p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-10 print:grid-cols-3 print:gap-6">
+        {/* বডি কন্টেইনার */}
+        <div className="grid grid-cols-3 gap-8 flex-1">
 
-          <div className="space-y-8 md:col-span-1">
+          {/* বাম কলাম */}
+          <div className="col-span-1 space-y-5">
 
-            {/* About */}
+            {/* ২. Technical Skills */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Professional Summary</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed print:text-slate-700">
-                Passionate Full Stack Developer specializing in building modern, responsive, and scalable web applications. Proficient in React, Next.js, Node.js, and MongoDB with a strong focus on SaaS products, dashboards, and AI integrations. Always eager to learn and build real-world solutions.
-              </p>
-            </div>
-
-            {/* Skills */}
-            <div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Technical Skills</h3>
-              <div className="space-y-3 text-sm">
+              <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Technical Skills</h3>
+              <div className="space-y-3 text-[13px]">
                 <div>
-                  <span className="font-bold text-slate-800 dark:text-slate-200 block mb-1">Frontend</span>
-                  <p className="text-slate-600 dark:text-slate-400">React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript</p>
+                  <span className="font-bold text-slate-900 block mb-0.5">Frontend</span>
+                  <p className="text-slate-600 leading-relaxed">React.js, Next.js, TypeScript, JavaScript, Tailwind CSS, HTML5, CSS3</p>
                 </div>
                 <div>
-                  <span className="font-bold text-slate-800 dark:text-slate-200 block mb-1">Backend</span>
-                  <p className="text-slate-600 dark:text-slate-400">Node.js, Express, NestJS, REST API, JWT Auth</p>
+                  <span className="font-bold text-slate-900 block mb-0.5">Backend</span>
+                  <p className="text-slate-600 leading-relaxed">Node.js, Express.js, REST API, JWT Auth, Socket.io</p>
                 </div>
                 <div>
-                  <span className="font-bold text-slate-800 dark:text-slate-200 block mb-1">Database</span>
-                  <p className="text-slate-600 dark:text-slate-400">MongoDB, PostgreSQL, Prisma ORM</p>
-                </div>
-                <div>
-                  <span className="font-bold text-slate-800 dark:text-slate-200 block mb-1">Tools & Others</span>
-                  <p className="text-slate-600 dark:text-slate-400">Git, GitHub, Docker, AWS, OpenAI API, Socket.io</p>
+                  <span className="font-bold text-slate-900 block mb-0.5">Database & Tools</span>
+                  <p className="text-slate-600 leading-relaxed">MongoDB, PostgreSQL, Prisma, Git, GitHub, Vercel</p>
                 </div>
               </div>
             </div>
 
+            {/* ৩. Education */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Education & Training</h3>
-              <div className="space-y-4">
+              <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Education</h3>
+              <div className="space-y-2 text-[13px]">
                 <div>
-                  <h4 className="font-bold text-sm text-slate-900 dark:text-white print:text-black">Diploma in CST</h4>
-                  <p className="text-xs text-slate-500 mt-1">Rajshahi Polytechnic Institute</p>
-                  <p className="text-xs text-slate-400 font-medium mt-0.5">Current Semester: 5th</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-sm text-slate-900 dark:text-white print:text-black">AI-Driven Full Stack Web Engineer</h4>
-                  <p className="text-xs text-slate-500 mt-1">Programming Hero (Batch-14)</p>
-                  <p className="text-xs text-slate-400 font-medium mt-0.5">Frontend Completed · Backend in Progress</p>
+                  <h4 className="font-bold text-slate-900 text-[14px]">Diploma in CST</h4>
+                  <p className="text-slate-600">Rajshahi Polytechnic Institute</p>
+                  <p className="text-slate-500">Current: 5th Semester</p>
+                  <p className="text-slate-500">Expected Graduation: 2027</p>
                 </div>
               </div>
             </div>
 
-  
+            {/* ৬. Courses & Certifications */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Languages</h3>
-              <ul className="text-sm text-slate-600 dark:text-slate-400 space-y-2">
-                <li className="flex justify-between"><span>Bengali</span> <span className="font-semibold text-slate-800 dark:text-slate-200">Native</span></li>
-                <li className="flex justify-between"><span>English</span> <span className="font-semibold text-slate-800 dark:text-slate-200">Intermediate</span></li>
+              <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Certifications</h3>
+              <ul className="text-[13px] text-slate-600 space-y-1.5 leading-tight">
+                <li>• Programming Hero: Full Stack Web Engineer (Ongoing)</li>
+                <li>• Responsive Web Design (freeCodeCamp)</li>
+                <li>• Intro to JavaScript for Front-End (CodeSignal)</li>
+              </ul>
+            </div>
+
+            {/* ৭. Language Skills */}
+            <div>
+              <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Languages</h3>
+              <ul className="text-[13px] text-slate-600 space-y-1">
+                <li className="flex justify-between"><span>Bengali</span> <span className="font-semibold">Native</span></li>
+                <li className="flex justify-between"><span>English</span> <span className="font-semibold">Intermediate</span></li>
+              </ul>
+            </div>
+
+            {/* Key Strengths */}
+            <div>
+              <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Key Strengths</h3>
+              <ul className="text-[13px] text-slate-600 space-y-1 leading-tight">
+                <li>• Problem-Solving Mindset</li>
+                <li>• Fast Learner & Adaptable</li>
+                <li>• Clean Code Practices</li>
               </ul>
             </div>
 
           </div>
 
-  
-          <div className="space-y-8 md:col-span-2">
+          {/* ডান কলাম */}
+          <div className="col-span-2 space-y-5">
 
-
+            {/* ২. Professional Summary */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Selected Projects</h3>
+              <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Professional Summary</h3>
+              <p className="text-[13px] text-slate-600 leading-relaxed">
+                Passionate Full Stack Developer with a solid foundation in frontend technologies and growing expertise in backend development. Experienced in building responsive, scalable web applications using React, Next.js, and Node.js. Currently pursuing a Diploma in CST and seeking a Junior Developer or Internship role to contribute to production-level applications.
+              </p>
+            </div>
 
-              <div className="space-y-6">
+            {/* ৫. Projects */}
+            <div>
+              <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-3">Projects</h3>
+
+              <div className="space-y-4 text-[13px]">
+
                 <div>
-                  <div className="flex justify-between items-start mb-1">
-                    <h4 className="font-bold text-slate-900 dark:text-white print:text-black">HireNet — Job Board & Admin Portal</h4>
+                  <div className="flex justify-between items-baseline mb-1">
+                    <h4 className="font-bold text-slate-900 text-[14px]">DevStack — Web Application</h4>
+                    <span className="text-blue-600 font-semibold text-[11px]">React · TypeScript · Tailwind</span>
                   </div>
-                  <p className="text-xs font-semibold text-blue-600 mb-2">Next.js · Node.js · MongoDB · JWT</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 print:text-slate-700 leading-relaxed mb-1">
-                    Dual-dashboard job board for seekers & employers with role-based access, job moderation, and applicant tracking pipeline.
+                  <p className="text-slate-600 leading-relaxed mb-1">
+                    Built a fully responsive web app with reusable components.
                   </p>
-                  <p className="text-xs font-medium text-slate-500">
-                    <a href="https://hirenet.vercel.app" target="_blank" className="text-blue-500 hover:underline">Live Demo</a>
-                  </p>
+                  <p className="text-slate-600"><strong className="font-semibold text-slate-800">Features:</strong> Component-driven UI, responsive layouts, optimized state management.</p>
+                  <p className="text-[11px] text-slate-500 mt-1">Live: devstack-ph-s.vercel.app | Code: github.com/aminulislamdev/DevStack</p>
                 </div>
 
                 <div>
-                  <div className="flex justify-between items-start mb-1">
-                    <h4 className="font-bold text-slate-900 dark:text-white print:text-black">TaskFlow — Project Management SaaS</h4>
+                  <div className="flex justify-between items-baseline mb-1">
+                    <h4 className="font-bold text-slate-900 text-[14px]">HireNet — Job Board</h4>
+                    <span className="text-blue-600 font-semibold text-[11px]">Next.js · Node.js · MongoDB</span>
                   </div>
-                  <p className="text-xs font-semibold text-blue-600 mb-2">Next.js · Node.js · MongoDB · JWT Auth</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 print:text-slate-700 leading-relaxed mb-1">
-                    Role-based project management with Admin/User access, JWT auth, real-time CRUD, and relational MongoDB schema.
+                  <p className="text-slate-600 leading-relaxed mb-1">
+                    Architected a dual-dashboard platform for job seekers and employers.
                   </p>
-                  <p className="text-xs font-medium text-slate-500">
-                    <a href="https://taskflow.vercel.app" target="_blank" className="text-blue-500 hover:underline">Live Demo</a>
-                  </p>
+                  <p className="text-slate-600"><strong className="font-semibold text-slate-800">Features:</strong> Role-based access control, JWT authentication, job moderation, applicant tracking.</p>
+                  <p className="text-[11px] text-slate-500 mt-1">Code: github.com/aminulislamdev/HireNet</p>
                 </div>
 
                 <div>
-                  <div className="flex justify-between items-start mb-1">
-                    <h4 className="font-bold text-slate-900 dark:text-white print:text-black">GenAI — Content Generation Platform</h4>
+                  <div className="flex justify-between items-baseline mb-1">
+                    <h4 className="font-bold text-slate-900 text-[14px]">ChatSphere — Real-Time Chat</h4>
+                    <span className="text-blue-600 font-semibold text-[11px]">React · Socket.io · Node.js</span>
                   </div>
-                  <p className="text-xs font-semibold text-blue-600 mb-2">React · Express.js · PostgreSQL · OpenAI API</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 print:text-slate-700 leading-relaxed mb-1">
-                    AI-powered SaaS with OpenAI API integration, credit-based subscription system in PostgreSQL with Prisma ORM.
+                  <p className="text-slate-600 leading-relaxed mb-1">
+                    Developed a real-time messaging application for instant communication.
                   </p>
-                  <p className="text-xs font-medium text-slate-500">
-                    <a href="https://genai-platform.vercel.app" target="_blank" className="text-blue-500 hover:underline">Live Demo</a>
-                  </p>
+                  <p className="text-slate-600"><strong className="font-semibold text-slate-800">Features:</strong> Private/group chats, online status, typing indicators, Socket.io integration.</p>
+                  <p className="text-[11px] text-slate-500 mt-1">Code: github.com/aminulislamdev/ChatSphere</p>
                 </div>
 
                 <div>
-                  <div className="flex justify-between items-start mb-1">
-                    <h4 className="font-bold text-slate-900 dark:text-white print:text-black">StockPulse — E-Commerce Inventory</h4>
+                  <div className="flex justify-between items-baseline mb-1">
+                    <h4 className="font-bold text-slate-900 text-[14px]">FitLog — Workout Library</h4>
+                    <span className="text-blue-600 font-semibold text-[11px]">React · LocalStorage</span>
                   </div>
-                  <p className="text-xs font-semibold text-blue-600 mb-2">Tailwind CSS · NestJS · Prisma · MongoDB</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 print:text-slate-700 leading-relaxed mb-1">
-                    Inventory dashboard for thousands of products with real-time analytics, low-stock alerts, and dynamic filtering.
+                  <p className="text-slate-600 leading-relaxed mb-1">
+                    Created an interactive workout tracking platform.
                   </p>
-                  <p className="text-xs font-medium text-slate-500">
-                    <a href="https://stockpulse.vercel.app" target="_blank" className="text-blue-500 hover:underline">Live Demo</a>
-                  </p>
+                  <p className="text-slate-600"><strong className="font-semibold text-slate-800">Features:</strong> Client-side state management, local storage persistence, workout plan customization.</p>
+                  <p className="text-[11px] text-slate-500 mt-1">Code: github.com/aminulislamdev/Fitlog</p>
                 </div>
 
-                <div>
-                  <div className="flex justify-between items-start mb-1">
-                    <h4 className="font-bold text-slate-900 dark:text-white print:text-black">ChatSphere — Real-Time Chat</h4>
-                  </div>
-                  <p className="text-xs font-semibold text-blue-600 mb-2">React · Socket.io · Node.js · MongoDB</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 print:text-slate-700 leading-relaxed mb-1">
-                    WebSocket chat with private/group messaging, online status, typing indicators, and file sharing.
-                  </p>
-                  <p className="text-xs font-medium text-slate-500">
-                    <a href="https://chatsphere.vercel.app" target="_blank" className="text-blue-500 hover:underline">Live Demo</a>
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex justify-between items-start mb-1">
-                    <h4 className="font-bold text-slate-900 dark:text-white print:text-black">DevBlog — Markdown Blog Platform</h4>
-                  </div>
-                  <p className="text-xs font-semibold text-blue-600 mb-2">Next.js · MDX · Prisma · PostgreSQL</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 print:text-slate-700 leading-relaxed mb-1">
-                    Developer blog with custom Markdown editor, syntax highlighting, SEO meta tags, and admin panel with draft scheduling.
-                  </p>
-                  <p className="text-xs font-medium text-slate-500">
-                    <a href="https://devblog.vercel.app" target="_blank" className="text-blue-500 hover:underline">Live Demo</a>
-                  </p>
-                </div>
               </div>
             </div>
 
-            {/* Certifications */}
+            {/* Achievements */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Certifications & Learning</h3>
-              <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 print:text-slate-700 space-y-1">
-                <li>Programming Hero — AI-Driven Full Stack Web Engineer (Batch-14), ongoing</li>
-                <li>Responsive Web Design — freeCodeCamp</li>
-                <li>Introduction to JavaScript for Front-End Engineers — CodeSignal</li>
+              <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Achievements</h3>
+              <ul className="text-[13px] text-slate-600 space-y-1 leading-tight">
+                <li>• Earned 60/60 on multiple Programming Hero coding assignments.</li>
+                <li>• Selected for Programming Hero&apos;s exclusive Durbar Group (Top Students).</li>
               </ul>
-            </div>
-
-            {/* Career Objective */}
-            <div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 border-b border-slate-200 pb-2 mb-4">Career Objective</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400 print:text-slate-700 leading-relaxed">
-                Seeking a Junior Frontend Developer, Junior Web Developer, or internship role while progressing toward full-stack development.
-              </p>
             </div>
 
           </div>
         </div>
       </div>
+
+      {/* প্রিন্ট স্টাইল */}
       <style jsx global>{`
         @media print {
           @page { size: A4; margin: 0; }
-          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-          nav, footer { display: none !important; }
+          body { 
+            -webkit-print-color-adjust: exact; 
+            print-color-adjust: exact; 
+            background: white;
+            margin: 0;
+            padding: 0;
+          }
+          nav, footer, .print\:hidden { display: none !important; }
         }
       `}</style>
     </div>
