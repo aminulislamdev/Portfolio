@@ -44,14 +44,16 @@ export default function About() {
 
           <div className="space-y-4 text-slate-600 dark:text-slate-400 mb-8">
             <p>
-              I&apos;m <strong className="text-slate-900 dark:text-white">Aminul Islam</strong>, a passionate Full Stack Developer specializing in building modern, responsive, and scalable web applications.
+              I&apos;m <strong className="text-slate-900 dark:text-white">Aminul Islam</strong>, an aspiring Full Stack Developer currently pursuing a Diploma in CST at Rajshahi Polytechnic Institute.
             </p>
             <p>
-              My skill set includes designing clean UI/UX, developing REST APIs, handling databases, and automating workflows. I focus on writing efficient, maintainable code.
+              I have a strong foundation in frontend development using React, Next.js, and TypeScript, and I am actively expanding my backend skills with Node.js and databases. I focus on writing clean, maintainable code and building real-world projects.
+            </p>
+            <p>
+              I am currently seeking a <strong className="text-slate-900 dark:text-white">Junior Developer or Internship role</strong> where I can contribute to production-level applications and grow under the mentorship of experienced engineers.
             </p>
           </div>
 
-         
           <div className="grid grid-cols-2 gap-4 mb-8">
             {infoItems.map((item, index) => (
               <div key={index} className="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
