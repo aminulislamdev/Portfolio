@@ -7,37 +7,42 @@ export interface TimelineItem {
   color: "brand" | "blue" | "purple" | "green";
 }
 
-export const timelineData: TimelineItem[] = [
+
+export const educationData: TimelineItem[] = [
   {
     id: 1,
     year: "2023",
-    phase: "Foundation",
-    title: "Completed SSC — Mosjid Mission Academy",
-    description: "Built a strong academic foundation in logic and mathematics. Discovered a deep passion for problem-solving.",
+    phase: "SSC Completed",
+    title: "Secondary School Certificate (SSC)",
+    description: "Completed SSC from Masjid Mission Academy with a strong foundation in logic and mathematics.",
     color: "brand",
   },
   {
     id: 2,
-    year: "2024",
-    phase: "Skill Acquisition",
-    title: "CST Diploma Begins — 1st & 2nd Semester",
-    description: "Started learning core programming. Mastered data structures, algorithms, and understood how data flows within computer systems.",
+    year: "2024 - Present",
+    phase: "Diploma",
+    title: "Diploma in Computer Science & Technology (CST)",
+    description: "Currently pursuing a Diploma in CST at Rajshahi Polytechnic Institute. (5th Semester running)",
     color: "blue",
+  }
+];
+
+
+export const journeyData: TimelineItem[] = [
+  {
+    id: 1,
+    year: "Oct 2025",
+    phase: "The Beginning",
+    title: "Started Learning Web Development",
+    description: "Began my journey with HTML and CSS. As I built small layouts, I gradually started falling in love with coding and problem-solving.",
+    color: "brand",
   },
   {
-    id: 3,
-    year: "2025",
+    id: 2,
+    year: "April 2026 - Present",
     phase: "The Full-Stack Shift",
-    title: "3rd & 4th Semester — Web Architecture",
-    description: "Took a strategic turn towards Full-Stack. Mastered HTML/CSS/JS, then dove deep into React, Node.js, and Database Management.",
-    color: "purple",
-  },
-  {
-    id: 4,
-    year: "Present",
-    phase: "5th Semester",
-    title: "SaaS & Advanced Systems",
-    description: "Focusing heavily on Next.js, TypeScript, Prisma, and AI integrations. Building production-ready SaaS projects.",
+    title: "Completed Frontend & Started Backend",
+    description: "Finished my frontend phase covering JavaScript, React, and Next.js. Currently diving deep into Node.js, Express, and Database Management to become a Full Stack Developer.",
     color: "green",
-  },
+  }
 ];
