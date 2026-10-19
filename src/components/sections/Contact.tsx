@@ -8,15 +8,15 @@ export default function Contact() {
     <section id="contact" className="py-20 px-6 bg-slate-100 dark:bg-slate-900/50">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
 
-        {/* বাম দিক: ইনফো */}
+       
         <div>
           <SectionTitle
             label="Get in Touch"
-            title="Let's Build Something Great"
+            title="Let's Connect"
             center={false}
           />
           <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-md">
-            Have a SaaS idea that needs building? Need a robust backend architecture for your application? I&apos;m always open to discussing new projects.
+            I am actively seeking Junior Full Stack Developer or Internship opportunities. If you have an opening or would like to discuss how I can contribute to your engineering team, feel free to reach out.
           </p>
 
           <div className="space-y-4">
