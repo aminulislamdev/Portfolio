@@ -42,22 +42,20 @@ export default function CVPage() {
         {/* ১. হেডার সেকশন */}
         <div className="flex justify-between items-start border-b-2 border-slate-800 pb-4 mb-4 shrink-0">
           <div className="flex-1">
-            {/* নাম ও টাইটেল ফন্ট বড় করা হলো */}
             <h1 className="text-4xl font-bold text-slate-900 tracking-tight mb-1">Md. Aminul Islam Mahi</h1>
             <h2 className="text-xl font-semibold text-blue-600 mb-3">Aspiring Full Stack Developer</h2>
 
-            {/* কন্টাক্ট ইনফো ফন্ট একটু বড় করা হলো */}
             <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-[13px] text-slate-600">
               <span className="flex items-center gap-2"><MapPin size={14} /> Rajshahi, Bangladesh</span>
               <span className="flex items-center gap-2"><Phone size={14} /> +880 1709150885</span>
               <span className="flex items-center gap-2"><Mail size={14} /> aminulislam424842@gmail.com</span>
               <span className="flex items-center gap-2"><GithubIcon size={14} /> github.com/aminulislamdev</span>
               <span className="flex items-center gap-2"><LinkedinIcon size={14} /> linkedin.com/in/aminulislamjs/</span>
-              <span className="flex items-center gap-2"><Globe size={14} /> aminul-portfolio.vercel.app</span>
+              <span className="flex items-center gap-2"><Globe size={14} /> aminul-seven.vercel.app/</span>
             </div>
           </div>
 
-          <div className="w-28 h-28 ml-6 relative rounded-lg overflow-hidden border border-slate-200 shrink-0 shadow-sm">
+          <div className="w-32 h-32 ml-6 relative rounded-lg overflow-hidden border border-slate-200 shrink-0 shadow-sm">
             <Image
               src="/profile.jpg"
               alt="Aminul Islam"
@@ -67,13 +65,13 @@ export default function CVPage() {
           </div>
         </div>
 
-        {/* বডি কন্টেইনার */}
+        
         <div className="grid grid-cols-3 gap-8 flex-1">
 
-          {/* বাম কলাম */}
+      
           <div className="col-span-1 space-y-5">
 
-            {/* ২. Technical Skills */}
+       
             <div>
               <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Technical Skills</h3>
               <div className="space-y-3 text-[13px]">
@@ -83,11 +81,11 @@ export default function CVPage() {
                 </div>
                 <div>
                   <span className="font-bold text-slate-900 block mb-0.5">Backend</span>
-                  <p className="text-slate-600 leading-relaxed">Node.js, Express.js, REST API, JWT Auth, Socket.io</p>
+                  <p className="text-slate-600 leading-relaxed">Node.js, Express.js, REST API, JWT Auth,Socket.io</p>
                 </div>
                 <div>
                   <span className="font-bold text-slate-900 block mb-0.5">Database & Tools</span>
-                  <p className="text-slate-600 leading-relaxed">MongoDB, PostgreSQL, Prisma, Git, GitHub, Vercel</p>
+                  <p className="text-slate-600 leading-relaxed">MongoDB, Git, GitHub, Vercel</p>
                 </div>
               </div>
             </div>
@@ -99,19 +97,57 @@ export default function CVPage() {
                 <div>
                   <h4 className="font-bold text-slate-900 text-[14px]">Diploma in CST</h4>
                   <p className="text-slate-600">Rajshahi Polytechnic Institute</p>
-                  <p className="text-slate-500">Current: 5th Semester</p>
+                  <p className="text-slate-500">Current: 6th Semester</p>
                   <p className="text-slate-500">Expected Graduation: 2027</p>
                 </div>
               </div>
             </div>
 
-            {/* ৬. Courses & Certifications */}
+            {/* ✅ ৫টি সার্টিফিকেট যুক্ত করা হলো */}
             <div>
               <h3 className="text-[14px] font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Certifications</h3>
-              <ul className="text-[13px] text-slate-600 space-y-1.5 leading-tight">
-                <li>• Programming Hero: Full Stack Web Engineer (Ongoing)</li>
-                <li>• Responsive Web Design (freeCodeCamp)</li>
-                <li>• Intro to JavaScript for Front-End (CodeSignal)</li>
+              <ul className="text-[12.5px] text-slate-600 space-y-2.5 leading-tight">
+
+                <li>
+                  <div className="flex justify-between items-center">
+                    <strong className="text-slate-800 text-[13px]">Programming Hero</strong>
+                    <span className="text-[9px] font-bold text-amber-600 px-1.5 py-0.5  ">Ongoing</span>
+                  </div>
+                  <div>Full Stack Web Engineer</div>
+                </li>
+
+                <li>
+                  <div className="flex justify-between items-center">
+                    <strong className="text-slate-800 text-[13px]">freeCodeCamp</strong>
+                    <span className="text-[9px] font-bold text-green-600  px-1.5 py-0.5  ">Certified</span>
+                  </div>
+                  <div>Responsive Web Design</div>
+                </li>
+
+                <li>
+                  <div className="flex justify-between items-center">
+                    <strong className="text-slate-800 text-[13px]">freeCodeCamp</strong>
+                    <span className="text-[9px] font-bold text-green-600  px-1.5 py-0.5 ">Certified</span>
+                  </div>
+                  <div>Front End Development Libraries</div>
+                </li>
+
+                <li>
+                  <div className="flex justify-between items-center">
+                    <strong className="text-slate-800 text-[13px]">CodeSignal</strong>
+                    <span className="text-[9px] font-bold text-green-600  px-1.5 py-0.5 ">Certified</span>
+                  </div>
+                  <div>Intro to JavaScript for Front-End</div>
+                </li>
+
+                <li>
+                  <div className="flex justify-between items-center">
+                    <strong className="text-slate-800 text-[13px]">CodeSignal</strong>
+                    <span className="text-[9px] font-bold text-green-600  px-1.5 py-0.5 ">Certified</span>
+                  </div>
+                  <div>Advanced Prompt Engineering</div>
+                </li>
+
               </ul>
             </div>
 
