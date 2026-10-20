@@ -22,7 +22,7 @@ export const educationData: TimelineItem[] = [
     year: "2024 - Present",
     phase: "Diploma",
     title: "Diploma in Computer Science & Technology (CST)",
-    description: "Currently pursuing a Diploma in CST at Rajshahi Polytechnic Institute. (5th Semester running)",
+    description: "Currently pursuing a Diploma in CST at Rajshahi Polytechnic Institute. (6th Semester running)",
     color: "blue",
   }
 ];
