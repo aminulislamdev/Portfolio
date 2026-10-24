@@ -11,7 +11,7 @@ export default function Certificates() {
   const [showAll, setShowAll] = useState(false);
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
 
-  // showAll true হলে সব, false হলে প্রথম ৪টি
+  // Show all or initial 4 certificates
   const displayedCertificates = showAll
     ? certificatesData
     : certificatesData.slice(0, 4);
@@ -23,7 +23,7 @@ export default function Certificates() {
           <SectionTitle
             label="Credentials"
             title="Certificates & Learning"
-            subtitle="Hover to preview · Click to view full certificate · Organized by category."
+            subtitle="Click on any certificate to view detailed credentials and inspect the full-size document."
           />
 
           <CertificateGrid
@@ -31,17 +31,26 @@ export default function Certificates() {
             onSelect={setSelectedCert}
           />
 
-          {!showAll && (
+          {certificatesData.length > 4 && (
             <div className="text-center mt-12">
-              <Button onClick={() => setShowAll(true)} variant="primary" size="lg">
-                Show All Certificates
+              <Button
+                onClick={() => setShowAll((prev) => !prev)}
+                variant="primary"
+                size="lg"
+              >
+                {showAll
+                  ? "Show Less"
+                  : `Show All Certificates (${certificatesData.length})`}
               </Button>
             </div>
           )}
         </div>
       </section>
 
-      <CertificateModal cert={selectedCert} onClose={() => setSelectedCert(null)} />
+      <CertificateModal
+        cert={selectedCert}
+        onClose={() => setSelectedCert(null)}
+      />
     </>
   );
 }
