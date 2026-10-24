@@ -9,10 +9,10 @@
 <br/>
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-aminul--seven.vercel.app-3B82F6?style=for-the-badge&logo=vercel&logoColor=white)](https://aminul-seven.vercel.app/)
-[![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 </div>
 
@@ -21,37 +21,43 @@
 ## 📑 Table of Contents
 
 - [About The Project](#-about-the-project)
-- [Key Features](#-key-features)
+- [Key Features & Sections](#-key-features--sections)
 - [Tech Stack](#️-tech-stack)
+- [Project Previews](#-project-previews)
 - [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started-locally)
-- [How to Update Content](#-how-to-update-content)
-- [Connect with Me](#-connect-with-me)
-- [License](#-license)
+- [Getting Started Locally](#-getting-started-locally)
+- [Environment Variables](#-environment-variables)
+- [Available Scripts](#-available-scripts)
+- [Deployment](#-deployment)
+- [Author & Connect](#-author--connect)
 
 ---
 
 ## 📖 About The Project
 
-This portfolio is designed to highlight my frontend expertise, ongoing backend learning journey, and real-world projects. Instead of focusing on freelance services, it is specifically tailored to attract **Tech Recruiters, Engineering Managers, and HRs** for **Junior Full Stack Developer** and **Internship** roles.
+Welcome to the repository of **Md. Aminul Islam Mahi's** developer portfolio. Designed specifically for technical recruiters, engineering managers, and technical leads, this portfolio highlights practical frontend engineering, backend skills, and real-world web applications.
 
-It features a clean, minimal, and premium UI with a fully functional dark mode, responsive layouts, and a dedicated A4 print-ready CV page.
+It showcases a clean, modern aesthetic with fluid dark/light theming, interactive modals, responsive data filtering, and a dedicated A4 print-ready resume page.
 
-> 💡 **Goal:** Show honest skills, real projects, and readiness to grow on a professional team.
+* **Live Demo:** [https://aminul-seven.vercel.app/](https://aminul-seven.vercel.app/)
+* **CV Route:** [https://aminul-seven.vercel.app/cv](https://aminul-seven.vercel.app/cv)
+* **Status:** Open to Junior Full Stack Developer & Internship roles
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features & Sections
 
-| | Feature | Description |
-| :-: | :--- | :--- |
-| 🎨 | **Modern UI/UX** | Clean, minimal design with generous whitespace and premium typography |
-| 🌗 | **Dark / Light Mode** | Seamless theme switching with `next-themes` and `localStorage` persistence |
-| 📱 | **Fully Responsive** | Optimized for mobile, tablet, and desktop devices |
-| 🗂️ | **Dynamic Projects** | Featured projects with live demo and GitHub links, plus a roadmap of planned work |
-| 🏅 | **Interactive Certificates** | Gallery with a modal popup for viewing full certificates |
-| 📄 | **A4 Print-Ready CV** | Dedicated `/cv` route that fits a single A4 page, with a "Download PDF" (Print) button |
-| 🎯 | **Recruiter Focused** | Content tailored to reflect honesty and readiness for a junior developer role |
+| Section | Description |
+| :--- | :--- |
+| 🚀 **Hero Section** | Welcoming introduction with dynamic availability badge (*"Open to Internships & Junior Roles"*), quick CTA buttons, and verified social profiles. |
+| 👤 **About Me** | Background story, academic progression (Diploma in CST at Rajshahi Polytechnic Institute), key strengths, and quick contact details. |
+| 🛠️ **Interactive Skills** | 19 technologies categorized into **Frontend**, **Backend**, **Database**, **Languages**, and **Tools**. Includes interactive category filter pills, sorting by proficiency or name (A-Z, Z-A), and authentic brand vector icons. |
+| 💻 **Featured Projects & Modal** | Curated real-world projects (**Bazardor**, **FitLog**, **Book Vibe**, **DevStack**). Every card opens a responsive 2-column modal displaying project preview, technology badges, key features list, and direct links to Live Demo and GitHub. |
+| 📜 **Certifications Gallery** | Verified credentials from **CodeSignal** and **freeCodeCamp**. Features interactive modal preview, category tags, issue dates, and a button to inspect the full-size document. |
+| ⏳ **Timeline** | Chronological journey tracking both educational milestones (Diploma in CST, SSC) and self-directed programming growth. |
+| 📬 **Contact Section** | Functional contact options including Email, WhatsApp direct messaging, and message submission form. |
+| 📄 **A4 Print-Ready CV** | Dedicated `/cv` route engineered to fit a standard A4 page layout with a one-click PDF print trigger (`window.print()`). |
+| 🌗 **Dark / Light Mode** | System and manual theme switching powered by `next-themes` with persistent preference storage. |
 
 ---
 
@@ -59,131 +65,161 @@ It features a clean, minimal, and premium UI with a fully functional dark mode, 
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind,react,vercel,git,github,vscode&theme=dark" alt="Tech stack icons" />
+<img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,nodejs,express,mongodb,git,github,vscode,vercel&theme=dark" alt="Tech stack icons" />
 
 </div>
 
 <br/>
 
-| Category | Technologies |
+| Layer | Technologies |
 | :--- | :--- |
-| **Framework** | Next.js 14 (App Router) |
-| **Language** | TypeScript |
-| **Styling** | Tailwind CSS |
-| **Icons** | Lucide React & Custom SVGs |
-| **Theme** | next-themes |
-| **Deployment** | Vercel |
+| **Framework** | [Next.js 16](https://nextjs.org/) (App Router & Turbopack) |
+| **Library** | [React 19](https://react.dev/) |
+| **Language** | [TypeScript 5](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) with CSS custom properties |
+| **Icons** | [Lucide React](https://lucide.dev/) & Custom SVG Technology Brand Icons |
+| **Theming** | [next-themes](https://github.com/pacocoursey/next-themes) |
+| **Typography** | Google Fonts ([Inter](https://fonts.google.com/specimen/Inter) & [Playfair Display](https://fonts.google.com/specimen/Playfair+Display)) |
+| **Deployment** | [Vercel](https://vercel.com/) |
+
+---
+
+## 📸 Project Previews
+
+The portfolio features verified full-stack and frontend applications:
+
+| Project | Category | Live Demo / Code | Preview Asset |
+| :--- | :--- | :--- | :--- |
+| **Bazardor** | Full Stack | [Live Demo](https://bazardor-nu.vercel.app/) | [`public/projects/bazardor.svg`](public/projects/bazardor.svg) |
+| **FitLog** | Frontend | [Live Demo](https://fitlog-ph-s.vercel.app/) · [GitHub](https://github.com/aminulislamdev/Fitlog) | [`public/projects/fitlog.svg`](public/projects/fitlog.svg) |
+| **Book Vibe** | Frontend | [Live Demo](https://book-vibe-ph-s.vercel.app/) | [`public/projects/book-vibe.svg`](public/projects/book-vibe.svg) |
+| **DevStack** | Frontend | [Live Demo](https://devstack-ph-s.vercel.app/) · [GitHub](https://github.com/aminulislamdev/DevStack) | [`public/projects/devstack.svg`](public/projects/devstack.svg) |
 
 ---
 
 ## 📂 Project Structure
 
-<details>
-<summary><b>Click to expand the folder tree</b></summary>
-
-<br/>
-
 ```text
-├── public/                 # Static assets (images, logo, certificates, cv.pdf)
+aminul-portfolio/
+├── public/
+│   ├── certificates/           # Verified certification documents (PNG)
+│   ├── projects/               # Vector preview mockups (SVG)
+│   ├── about.jpg               # About section photograph
+│   ├── profile.jpg             # Hero profile image
+│   └── logo.png                # Brand logo
 ├── src/
-│   ├── app/                # Next.js App Router
-│   │   ├── cv/             # Dedicated A4 CV page (/cv)
-│   │   ├── globals.css     # Global styles & Tailwind directives
-│   │   ├── layout.tsx      # Root layout with ThemeProvider
-│   │   └── page.tsx        # Main portfolio page
-│   ├── components/         # Reusable components
-│   │   ├── layout/         # Navbar, Footer
-│   │   ├── sections/       # Hero, About, Skills, Projects, Certificates, Timeline, Contact
-│   │   ├── certificates/   # CertificateCard, CertificateGrid, CertificateModal
-│   │   └── ui/             # Button, Badge, SectionTitle, ProjectCard
-│   ├── data/               # Static data files
-│   │   ├── certificates.ts # Certificate data
-│   │   ├── navLinks.ts     # Navigation links
-│   │   ├── projects.ts     # Featured & Roadmap projects data
-│   │   ├── skills.ts       # Skills & Tech Stack data
-│   │   └── timeline.ts     # Developer journey data
-│   └── ThemeProvider.tsx   # Theme context provider
-├── tailwind.config.ts      # Tailwind configuration
-├── tsconfig.json           # TypeScript configuration
-└── package.json            # Project dependencies
+│   ├── app/
+│   │   ├── cv/                 # Print-ready A4 CV page (/cv)
+│   │   │   └── page.tsx
+│   │   ├── globals.css         # Global styles & keyframe animations
+│   │   ├── layout.tsx          # Root layout with fonts & ThemeProvider
+│   │   └── page.tsx            # Single-page portfolio entry
+│   ├── components/
+│   │   ├── certificates/       # CertificateCard, CertificateGrid, CertificateModal
+│   │   ├── layout/             # Navbar, Footer
+│   │   ├── sections/           # Hero, About, Skills, Projects, Certificates, Timeline, Contact
+│   │   ├── ui/                 # Button, Badge, ProjectCard, ProjectModal, SectionTitle, TechIcon
+│   │   └── ThemeProvider.tsx   # Next-themes client provider
+│   └── data/
+│       ├── certificates.ts     # Certificate records & metadata
+│       ├── navLinks.ts         # Navigation menu links
+│       ├── projects.ts         # Featured project details & key features
+│       ├── skills.ts           # Categorized skills & proficiency ratings
+│       └── timeline.ts         # Career & education milestones
+├── eslint.config.mjs           # ESLint configuration
+├── next.config.ts              # Next.js configuration
+├── package.json                # Project dependencies and scripts
+├── tailwind.config.ts          # Tailwind CSS settings
+└── tsconfig.json               # TypeScript configuration
 ```
-
-</details>
 
 ---
 
 ## 🚀 Getting Started Locally
 
-Follow these steps to run the project on your machine.
+Follow these steps to run the portfolio locally on your machine.
 
 ### Prerequisites
 
-Make sure you have [Node.js](https://nodejs.org/) installed (**v18 or higher**).
+Ensure you have **Node.js 18.18 or higher** installed:
+
+```bash
+node -v
+npm -v
+```
 
 ### Installation
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/aminulislamdev/aminul-portfolio.git
+1. **Clone the repository:**
 
-# 2. Navigate to the project directory
-cd aminul-portfolio
+   ```bash
+   git clone https://github.com/aminulislamdev/Portfolio.git
+   cd Portfolio
+   ```
 
-# 3. Install dependencies
-npm install
+2. **Install dependencies:**
 
-# 4. Run the development server
-npm run dev
-```
+   ```bash
+   npm install
+   ```
 
-Then open your browser:
+3. **Start the development server:**
 
-| Page | URL |
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser:**
+
+   Navigate to [http://localhost:3000](http://localhost:3000) for the main portfolio or [http://localhost:3000/cv](http://localhost:3000/cv) for the printable CV.
+
+---
+
+## 🔐 Environment Variables
+
+This portfolio is statically pre-rendered and completely self-contained. **No external `.env` file or API credentials are required** to run or build the project locally.
+
+---
+
+## 🔨 Available Scripts
+
+In the project directory, you can run:
+
+| Command | Action |
 | :--- | :--- |
-| 🏠 Main Portfolio | [http://localhost:3000](http://localhost:3000) |
-| 📄 A4 CV Page | [http://localhost:3000/cv](http://localhost:3000/cv) |
+| `npm run dev` | Starts the Next.js development server with Turbopack |
+| `npm run build` | Builds the optimized production application |
+| `npm run start` | Runs the built production server locally |
+| `npm run lint` | Runs ESLint and TypeScript checks across all files |
 
 ---
 
-## 💡 How to Update Content
+## 🌐 Deployment
 
-This portfolio is easy to maintain. You do not need to touch the UI components to update your data.
+This application is deployed on **[Vercel](https://vercel.com/)** with continuous integration enabled on the `main` branch:
 
-| I want to... | Edit this |
-| :--- | :--- |
-| Update projects | `src/data/projects.ts` (`featuredProjects` and `roadmapProjects` arrays) |
-| Update skills | `src/data/skills.ts` |
-| Add certificates | Add the image to `public/certificates/`, then update `src/data/certificates.ts` |
-| Update the CV | `src/app/cv/page.tsx` (layout is built for A4 printing) |
+1. Push changes to GitHub: `git push origin main`
+2. Vercel automatically triggers a production build using `next build`
+3. Output is statically served and globally distributed via Vercel's Edge Network
 
 ---
 
-## 📬 Connect with Me
+## 📬 Author & Connect
 
-<div align="center">
+**Md. Aminul Islam Mahi**  
+*Aspiring Full Stack Developer* · Rajshahi, Bangladesh
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-aminul--seven.vercel.app-3B82F6?style=for-the-badge&logo=vercel&logoColor=white)](https://aminul-seven.vercel.app/)
-[![Email](https://img.shields.io/badge/Email-aminulislam424842@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aminulislam424842@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-@aminulislamdev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aminulislamdev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-aminulislamjs-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aminulislamjs)
-
-📍 Rajshahi, Bangladesh
-
-</div>
-
----
-
-## 📝 License
-
-This project is open-source and available under the [MIT License](LICENSE).
+* **Live Portfolio:** [aminul-seven.vercel.app](https://aminul-seven.vercel.app/)
+* **GitHub:** [@aminulislamdev](https://github.com/aminulislamdev)
+* **LinkedIn:** [linkedin.com/in/aminulislamjs](https://www.linkedin.com/in/aminulislamjs/)
+* **Email:** [aminulislam424842@gmail.com](mailto:aminulislam424842@gmail.com)
+* **WhatsApp:** [+880 1709150885](https://wa.me/8801709150885)
 
 <div align="center">
 
 <br/>
 
-⭐ **If you like this project, consider giving it a star!** ⭐
-
-<i>Built with ❤️ by Md. Aminul Islam Mahi</i>
+⭐ **If you find this portfolio helpful, feel free to give the repository a star!** ⭐
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" alt="Footer banner" width="100%" />
 
