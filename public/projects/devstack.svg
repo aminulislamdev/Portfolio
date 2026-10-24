@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="devBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#0e1726" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#devBgGrad)" />
+
+  <g filter="url(#shadow4)" transform="translate(60, 40)">
+    <!-- Browser Frame -->
+    <rect width="1080" height="670" rx="16" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <rect width="1080" height="52" rx="16" fill="#1e293b" />
+    <rect y="40" width="1080" height="12" fill="#1e293b" />
+    <line x1="0" y1="52" x2="1080" y2="52" stroke="#334155" stroke-width="1" />
+
+    <!-- Window Dots -->
+    <circle cx="28" cy="26" r="6.5" fill="#ef4444" />
+    <circle cx="48" cy="26" r="6.5" fill="#f59e0b" />
+    <circle cx="68" cy="26" r="6.5" fill="#10b981" />
+
+    <!-- Address Bar -->
+    <rect x="240" y="12" width="600" height="28" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="540" y="31" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" text-anchor="middle">
+      🔒 https://devstack-ph-s.vercel.app
+    </text>
+
+    <!-- App Header Navbar -->
+    <g transform="translate(0, 52)">
+      <rect width="1080" height="64" fill="#0f172a" />
+      <line x1="0" y1="64" x2="1080" y2="64" stroke="#1e293b" stroke-width="1" />
+
+      <!-- Brand Logo -->
+      <rect x="36" y="16" width="32" height="32" rx="8" fill="url(#cyanGrad)" />
+      <text x="52" y="38" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+      <text x="80" y="38" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="bold">Dev<tspan fill="#38bdf8">Stack</tspan></text>
+
+      <!-- Nav links -->
+      <text x="210" y="38" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">All Technologies</text>
+      <text x="360" y="38" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">Frontend</text>
+      <text x="460" y="38" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">Backend</text>
+      <text x="560" y="38" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">DevOps &amp; Cloud</text>
+
+      <!-- Active Stack Pill -->
+      <rect x="880" y="16" width="160" height="32" rx="16" fill="#082f49" stroke="#0284c7" stroke-width="1" />
+      <circle cx="898" cy="32" r="5" fill="#38bdf8" />
+      <text x="965" y="36" fill="#7dd3fc" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Selected: 6 Techs</text>
+    </g>
+
+    <!-- App Body Content -->
+    <g transform="translate(40, 140)">
+      <text x="0" y="24" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold">Craft Your Perfect Modern Developer Tech Stack</text>
+      <text x="0" y="48" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">Select tools and libraries to architect your next application. Compare features and ecosystem support.</text>
+
+      <!-- Tech Cards 2x3 Grid -->
+      <g transform="translate(0, 75)">
+        <!-- Card 1: React -->
+        <g transform="translate(0, 0)">
+          <rect width="310" height="125" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="1.5" />
+          <circle cx="45" cy="45" r="22" fill="#082f49" />
+          <text x="45" y="52" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="bold" text-anchor="middle">⚛</text>
+          <text x="80" y="40" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold">React.js</text>
+          <text x="80" y="58" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Frontend UI Library · Meta</text>
+          <rect x="20" y="85" width="80" height="24" rx="4" fill="#0369a1" />
+          <text x="60" y="101" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">✓ Added</text>
+          <text x="270" y="101" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="11" text-anchor="end">v19.0</text>
+        </g>
+
+        <!-- Card 2: Next.js -->
+        <g transform="translate(345, 0)">
+          <rect width="310" height="125" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="1.5" />
+          <circle cx="45" cy="45" r="22" fill="#0f172a" />
+          <text x="45" y="52" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">N</text>
+          <text x="80" y="40" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold">Next.js</text>
+          <text x="80" y="58" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Full Stack Framework · Vercel</text>
+          <rect x="20" y="85" width="80" height="24" rx="4" fill="#0369a1" />
+          <text x="60" y="101" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">✓ Added</text>
+          <text x="270" y="101" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11" text-anchor="end">App Router</text>
+        </g>
+
+        <!-- Card 3: TypeScript -->
+        <g transform="translate(690, 0)">
+          <rect width="310" height="125" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="1.5" />
+          <rect x="25" y="25" width="40" height="40" rx="8" fill="#1e40af" />
+          <text x="45" y="52" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">TS</text>
+          <text x="80" y="40" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold">TypeScript</text>
+          <text x="80" y="58" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Typed JavaScript · Microsoft</text>
+          <rect x="20" y="85" width="80" height="24" rx="4" fill="#0369a1" />
+          <text x="60" y="101" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">✓ Added</text>
+          <text x="270" y="101" fill="#3b82f6" font-family="'Segoe UI', sans-serif" font-size="11" text-anchor="end">v5.7</text>
+        </g>
+
+        <!-- Card 4: Tailwind CSS -->
+        <g transform="translate(0, 145)">
+          <rect width="310" height="125" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="1.5" />
+          <circle cx="45" cy="45" r="22" fill="#082f49" />
+          <text x="45" y="52" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">🌊</text>
+          <text x="80" y="40" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold">Tailwind CSS</text>
+          <text x="80" y="58" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Utility-First CSS Framework</text>
+          <rect x="20" y="85" width="80" height="24" rx="4" fill="#0369a1" />
+          <text x="60" y="101" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">✓ Added</text>
+          <text x="270" y="101" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="11" text-anchor="end">v4.0</text>
+        </g>
+
+        <!-- Card 5: DaisyUI -->
+        <g transform="translate(345, 145)">
+          <rect width="310" height="125" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+          <circle cx="45" cy="45" r="22" fill="#3b0764" />
+          <text x="45" y="52" fill="#d8b4fe" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">🌼</text>
+          <text x="80" y="40" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold">DaisyUI</text>
+          <text x="80" y="58" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Tailwind CSS Component Library</text>
+          <rect x="20" y="85" width="80" height="24" rx="4" fill="#334155" />
+          <text x="60" y="101" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">+ Add</text>
+          <text x="270" y="101" fill="#a855f7" font-family="'Segoe UI', sans-serif" font-size="11" text-anchor="end">Themeable</text>
+        </g>
+
+        <!-- Card 6: MongoDB -->
+        <g transform="translate(690, 145)">
+          <rect width="310" height="125" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+          <circle cx="45" cy="45" r="22" fill="#064e3b" />
+          <text x="45" y="52" fill="#34d399" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">🍃</text>
+          <text x="80" y="40" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold">MongoDB</text>
+          <text x="80" y="58" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">NoSQL Document Database</text>
+          <rect x="20" y="85" width="80" height="24" rx="4" fill="#334155" />
+          <text x="60" y="101" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">+ Add</text>
+          <text x="270" y="101" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="11" text-anchor="end">Atlas Cloud</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

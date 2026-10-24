@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bookBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#2a1b0a" />
+    </linearGradient>
+    <linearGradient id="bookCover1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="bookCover2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="bookCover3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bookBgGrad)" />
+
+  <g filter="url(#shadow3)" transform="translate(60, 40)">
+    <!-- Browser Frame -->
+    <rect width="1080" height="670" rx="16" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <rect width="1080" height="52" rx="16" fill="#1e293b" />
+    <rect y="40" width="1080" height="12" fill="#1e293b" />
+    <line x1="0" y1="52" x2="1080" y2="52" stroke="#334155" stroke-width="1" />
+
+    <!-- Window Dots -->
+    <circle cx="28" cy="26" r="6.5" fill="#ef4444" />
+    <circle cx="48" cy="26" r="6.5" fill="#f59e0b" />
+    <circle cx="68" cy="26" r="6.5" fill="#10b981" />
+
+    <!-- Address Bar -->
+    <rect x="240" y="12" width="600" height="28" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="540" y="31" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" text-anchor="middle">
+      🔒 https://book-vibe-ph-s.vercel.app
+    </text>
+
+    <!-- App Header Navbar -->
+    <g transform="translate(0, 52)">
+      <rect width="1080" height="64" fill="#0f172a" />
+      <line x1="0" y1="64" x2="1080" y2="64" stroke="#1e293b" stroke-width="1" />
+
+      <!-- Brand Logo -->
+      <circle cx="48" cy="32" r="16" fill="#f59e0b" />
+      <text x="48" y="38" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" text-anchor="middle">📖</text>
+      <text x="76" y="38" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="bold">Book<tspan fill="#f59e0b">Vibe</tspan></text>
+
+      <!-- Nav links -->
+      <text x="220" y="38" fill="#fde68a" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">Browse Books</text>
+      <text x="360" y="38" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">Read List (8)</text>
+      <text x="480" y="38" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">Wishlist (4)</text>
+      <text x="600" y="38" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">Pages to Read Chart</text>
+
+      <!-- Search Input -->
+      <rect x="840" y="16" width="200" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="860" y="36" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Search books by title...</text>
+    </g>
+
+    <!-- App Body Content -->
+    <g transform="translate(40, 140)">
+      <text x="0" y="24" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold">Expand Your Horizons With Exceptional Books</text>
+      <text x="0" y="48" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">Organize reading goals, track pages read, and maintain your personal digital bookshelf.</text>
+
+      <!-- Books Grid -->
+      <g transform="translate(0, 75)">
+        <!-- Book 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="232" height="340" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+          <rect x="46" y="20" width="140" height="190" rx="8" fill="url(#bookCover1)" filter="drop-shadow(0 6px 8px rgba(0,0,0,0.4))" />
+          <text x="116" y="90" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">ATOMIC</text>
+          <text x="116" y="110" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">HABITS</text>
+          <text x="116" y="130" fill="#fef3c7" font-family="'Segoe UI', sans-serif" font-size="10" text-anchor="middle">James Clear</text>
+          
+          <text x="16" y="235" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">Atomic Habits</text>
+          <text x="16" y="254" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Self Help · 320 Pages · ⭐ 4.9</text>
+          <rect x="16" y="270" width="96" height="26" rx="6" fill="#059669" />
+          <text x="64" y="287" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">✓ Read List</text>
+          <rect x="120" y="270" width="96" height="26" rx="6" fill="#334155" />
+          <text x="168" y="287" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Wishlist</text>
+        </g>
+
+        <!-- Book 2 -->
+        <g transform="translate(256, 0)">
+          <rect width="232" height="340" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+          <rect x="46" y="20" width="140" height="190" rx="8" fill="url(#bookCover2)" filter="drop-shadow(0 6px 8px rgba(0,0,0,0.4))" />
+          <text x="116" y="90" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CLEAN</text>
+          <text x="116" y="110" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CODE</text>
+          <text x="116" y="130" fill="#cffafe" font-family="'Segoe UI', sans-serif" font-size="10" text-anchor="middle">Robert C. Martin</text>
+
+          <text x="16" y="235" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">Clean Code</text>
+          <text x="16" y="254" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Engineering · 464 Pages · ⭐ 4.8</text>
+          <rect x="16" y="270" width="96" height="26" rx="6" fill="#059669" />
+          <text x="64" y="287" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">✓ Read List</text>
+          <rect x="120" y="270" width="96" height="26" rx="6" fill="#334155" />
+          <text x="168" y="287" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Wishlist</text>
+        </g>
+
+        <!-- Book 3 -->
+        <g transform="translate(512, 0)">
+          <rect width="232" height="340" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+          <rect x="46" y="20" width="140" height="190" rx="8" fill="url(#bookCover3)" filter="drop-shadow(0 6px 8px rgba(0,0,0,0.4))" />
+          <text x="116" y="90" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">PRAGMATIC</text>
+          <text x="116" y="110" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">DEV</text>
+          <text x="116" y="130" fill="#ede9fe" font-family="'Segoe UI', sans-serif" font-size="10" text-anchor="middle">David Thomas</text>
+
+          <text x="16" y="235" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">Pragmatic Programmer</text>
+          <text x="16" y="254" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Software · 352 Pages · ⭐ 4.9</text>
+          <rect x="16" y="270" width="200" height="26" rx="6" fill="#d97706" />
+          <text x="116" y="287" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">+ Add to Wishlist</text>
+        </g>
+
+        <!-- Reading Stats Widget (4th Column) -->
+        <g transform="translate(768, 0)">
+          <rect width="232" height="340" rx="12" fill="#1a2234" stroke="#334155" stroke-width="1" />
+          <text x="16" y="32" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="bold">Reading Analytics</text>
+          <text x="16" y="52" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">This Month Goal: 1200 Pages</text>
+
+          <circle cx="116" cy="140" r="60" fill="none" stroke="#334155" stroke-width="12" />
+          <circle cx="116" cy="140" r="60" fill="none" stroke="#f59e0b" stroke-width="12" stroke-dasharray="377" stroke-dashoffset="120" stroke-linecap="round" transform="rotate(-90 116 140)" />
+          <text x="116" y="142" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="22" font-weight="bold" text-anchor="middle">68%</text>
+          <text x="116" y="160" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10" text-anchor="middle">816 / 1200 pgs</text>
+
+          <rect x="16" y="230" width="200" height="42" rx="8" fill="#1e293b" />
+          <text x="28" y="256" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">8 Books</text>
+          <text x="90" y="256" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">completed this year</text>
+
+          <rect x="16" y="284" width="200" height="42" rx="8" fill="#1e293b" />
+          <text x="28" y="310" fill="#34d399" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">4 Books</text>
+          <text x="90" y="310" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">in queue to read</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
