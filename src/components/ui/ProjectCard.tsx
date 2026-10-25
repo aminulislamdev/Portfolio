@@ -126,9 +126,14 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
               </a>
             )}
 
-            <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:underline ml-1">
-              Details →
-            </span>
+            <button
+              type="button"
+              onClick={onClick}
+              aria-label={`View more details for ${project.title}`}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white hover:bg-blue-700 active:scale-[0.97] transition-all shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+            >
+              View More
+            </button>
           </div>
         </div>
       </div>

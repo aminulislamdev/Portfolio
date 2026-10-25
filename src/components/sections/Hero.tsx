@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Code2, ExternalLink, Mail } from "lucide-react";
+import { Code2, ExternalLink, Mail, Download, Phone } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 const GithubIcon = ({ size = 16 }: { size?: number }) => (
@@ -47,22 +47,33 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-4 pt-6 items-center">
+        <div className="flex flex-wrap gap-3 pt-6 items-center">
           <Button href="#projects" variant="primary" size="lg" className="shadow-lg shadow-blue-600/20">
             View Projects
           </Button>
+
+          <Button href="/cv" variant="outline" size="lg">
+            <Download size={16} /> Download Resume
+          </Button>
+
           <Button href="#contact" variant="outline" size="lg">
             <Mail size={16} /> Contact Me
           </Button>
 
-          <div className="flex gap-3 ml-2">
-            <a href="https://github.com/aminulislamdev" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-all hover:-translate-y-1 text-slate-700 dark:text-slate-300 shadow-sm border border-slate-200 dark:border-slate-700">
-              <GithubIcon size={20} />
+          <div className="flex gap-3">
+          <a href="https://github.com/aminulislamdev" target="_blank" rel="noreferrer" aria-label="GitHub" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-all hover:-translate-y-1 text-slate-700 dark:text-slate-300 shadow-sm border border-slate-200 dark:border-slate-700">
+            <GithubIcon size={20} />
+          </a>
+          <a href="https://www.linkedin.com/in/aminulislamjs/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all hover:-translate-y-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 shadow-sm border border-slate-200 dark:border-slate-700">
+            <LinkedinIcon size={20} />
+          </a>
+          <a href="mailto:aminulislam424842@gmail.com" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-all hover:-translate-y-1 text-slate-700 dark:text-slate-300 shadow-sm border border-slate-200 dark:border-slate-700">
+              <Mail size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/aminulislamjs/" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all hover:-translate-y-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 shadow-sm border border-slate-200 dark:border-slate-700">
-              <LinkedinIcon size={20} />
+            <a href="https://wa.me/8801709150885" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-all hover:-translate-y-1 text-slate-700 dark:text-slate-300 shadow-sm border border-slate-200 dark:border-slate-700">
+              <Phone size={20} />
             </a>
-          </div>
+        </div>
         </div>
       </div>
 
